@@ -47,12 +47,12 @@ export class Clock extends React.Component<{}, ClockState> {
   render() {
     return (
       <>
-        <div onClick={this.clickLogger}>
+        <span onClick={this.clickLogger}>
           What time is it? By the way, click me!
-        </div>
-        <div>
+        </span>
+        <span>
           It is <FormattedDate date={this.state.date} />!
-        </div>
+        </span>
       </>
     )
   }

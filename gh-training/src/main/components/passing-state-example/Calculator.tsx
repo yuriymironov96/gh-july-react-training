@@ -24,7 +24,7 @@ export function Calculator() {
   const fahrenheit =
     scale === 'c' ? tryConvert(temperature, toFahrenheit) : temperature
   return (
-    <div>
+    <span>
       <TemperatureInput
         temperature={celsius}
         onTemperatureChange={handleCelsiusChange}
@@ -36,7 +36,7 @@ export function Calculator() {
         scale={ScaleNames.f}
       />
       <BoilingVerdict celsius={parseFloat(celsius)} />
-    </div>
+    </span>
   )
 }
 

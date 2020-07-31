@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import { BoilingVerdict } from './BoilingVerdict'
 import { TemperatureInput, ScaleNames } from './TemperatureInput'
 
+/**
+ * https://reactjs.org/docs/lifting-state-up.html
+ */
 export function Calculator() {
   const [{ temperature, scale }, setTemperatureState] = useState({
     temperature: '',

@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
 interface HelloProps {
-  name: string;
+  name: string
 }
 
 export function Hello(props: HelloProps) {
-  return <div>Hello, {props.name}</div>;
+  return <div>Hello, {props.name}</div>
 }

@@ -7,6 +7,7 @@ import { FakeAnchor } from './main/components/FakeAnchor'
 import { NameFormWrapper } from './main/components/form-submit-example/NameFormWrapper'
 import { MarginWrapper } from './main/components/MarginWrapper'
 import { Calculator } from './main/passing-state-example/Calculator'
+import { Route, BrowserRouter as Router, Link, Switch } from 'react-router-dom'
 
 function App() {
   return (
@@ -16,28 +17,69 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
-        <div>
-          <MarginWrapper>
-            <Hello name="Sasha"></Hello>
-          </MarginWrapper>
-          <MarginWrapper>
-            <Hello name="Masha"></Hello>
-          </MarginWrapper>
-          <MarginWrapper>
-            <Clock></Clock>
-          </MarginWrapper>
-          <MarginWrapper>
-            <FakeAnchor href="http://github.com/">
-              Visit github.com (not really)
-            </FakeAnchor>
-          </MarginWrapper>
-          <MarginWrapper>
-            <NameFormWrapper></NameFormWrapper>
-          </MarginWrapper>
-          <MarginWrapper>
-            <Calculator></Calculator>
-          </MarginWrapper>
-        </div>
+        <Router>
+          <div>
+            <ul>
+              <li>
+                <Link to="/">Simple components</Link>
+              </li>
+              <li>
+                <Link to="/clock">Clock</Link>
+              </li>
+              <li>
+                <Link to="/href">Href</Link>
+              </li>
+              <li>
+                <Link to="/forms">Forms</Link>
+              </li>
+            </ul>
+            <hr></hr>
+            <Switch>
+              <Route exact path="/">
+                <MarginWrapper>
+                  <Hello name="Sasha"></Hello>
+                </MarginWrapper>
+                <MarginWrapper>
+                  <Hello name="Masha"></Hello>
+                </MarginWrapper>
+              </Route>
+              <Route exact path="/clock">
+                <MarginWrapper>
+                  <Clock></Clock>
+                </MarginWrapper>
+              </Route>
+              <Route exact path="/href">
+                <MarginWrapper>
+                  <FakeAnchor href="http://github.com/">
+                    Visit github.com (not really)
+                  </FakeAnchor>
+                </MarginWrapper>
+              </Route>
+              <Route path="/forms">
+                <ul>
+                  <li>
+                    <Link to="/forms/name">Name</Link>
+                  </li>
+                  <li>
+                    <Link to="/forms/calc">Calculator</Link>
+                  </li>
+                </ul>
+                <Switch>
+                  <Route path="/forms/name">
+                    <MarginWrapper>
+                      <NameFormWrapper></NameFormWrapper>
+                    </MarginWrapper>
+                  </Route>
+                  <Route path="/forms/calc">
+                    <MarginWrapper>
+                      <Calculator></Calculator>
+                    </MarginWrapper>
+                  </Route>
+                </Switch>
+              </Route>
+            </Switch>
+          </div>
+        </Router>
         <a
           className="App-link"
           href="https://reactjs.org"

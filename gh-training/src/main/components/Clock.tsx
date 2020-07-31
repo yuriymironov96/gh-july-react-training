@@ -19,7 +19,7 @@ interface ClockState {
 
 export class Clock extends React.Component<{}, ClockState> {
   timerID?: any // setInterval returns NodeJS.Timeout type, clearInterval() accepts number type
-  classProperty = 'TS methods are bound by default.'
+  classProperty = 'TS methods are not bound by default.'
 
   componentWillMount() {
     this.setState({ date: new Date() })

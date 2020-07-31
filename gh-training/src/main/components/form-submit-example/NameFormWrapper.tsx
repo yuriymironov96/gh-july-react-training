@@ -9,9 +9,9 @@ export function NameFormWrapper() {
   const [name, setName] = useState('foo')
 
   return (
-    <div>
+    <span>
       My submitted name is {name}
       <NameForm handleSubmit={setName} defaultValue={name}></NameForm>
-    </div>
+    </span>
   )
 }

@@ -8,6 +8,6 @@ export function HiddenComponent(props: HiddenComponentProps) {
     console.log("I am here, but you can't see me!")
     return null
   } else {
-    return <div>Now you see me!</div>
+    return <span>Now you see me!</span>
   }
 }

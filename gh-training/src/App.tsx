@@ -6,7 +6,7 @@ import { Clock } from './main/components/Clock'
 import { FakeAnchor } from './main/components/FakeAnchor'
 import { NameFormWrapper } from './main/components/form-submit-example/NameFormWrapper'
 import { MarginWrapper } from './main/components/MarginWrapper'
-import { Calculator } from './main/passing-state-example/Calculator'
+import { Calculator } from './main/components/passing-state-example/Calculator'
 import { Route, BrowserRouter as Router, Link, Switch } from 'react-router-dom'
 
 function App() {

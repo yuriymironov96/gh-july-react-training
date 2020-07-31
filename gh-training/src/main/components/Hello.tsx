@@ -5,5 +5,5 @@ interface HelloProps {
 }
 
 export function Hello(props: HelloProps) {
-  return <div>Hello, {props.name}</div>
+  return <span>Hello, {props.name}</span>
 }

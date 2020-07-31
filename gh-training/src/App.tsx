@@ -4,7 +4,9 @@ import './App.css'
 import { Hello } from './main/components/Hello'
 import { Clock } from './main/components/Clock'
 import { FakeAnchor } from './main/components/FakeAnchor'
-import { HiddenComponent } from './main/components/HiddenComponent'
+import { NameFormWrapper } from './main/components/form-submit-example/NameFormWrapper'
+import { MarginWrapper } from './main/components/MarginWrapper'
+import { Calculator } from './main/passing-state-example/Calculator'
 
 function App() {
   return (
@@ -15,13 +17,26 @@ function App() {
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
         <div>
-          <Hello name="Sasha"></Hello>
-          <Hello name="Masha"></Hello>
-          <Clock></Clock>
-          <FakeAnchor href="http://github.com/">
-            Visit github.com (not really)
-          </FakeAnchor>
-          <HiddenComponent isHidden={true}></HiddenComponent>
+          <MarginWrapper>
+            <Hello name="Sasha"></Hello>
+          </MarginWrapper>
+          <MarginWrapper>
+            <Hello name="Masha"></Hello>
+          </MarginWrapper>
+          <MarginWrapper>
+            <Clock></Clock>
+          </MarginWrapper>
+          <MarginWrapper>
+            <FakeAnchor href="http://github.com/">
+              Visit github.com (not really)
+            </FakeAnchor>
+          </MarginWrapper>
+          <MarginWrapper>
+            <NameFormWrapper></NameFormWrapper>
+          </MarginWrapper>
+          <MarginWrapper>
+            <Calculator></Calculator>
+          </MarginWrapper>
         </div>
         <a
           className="App-link"

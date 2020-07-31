@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { BoilingVerdict } from './BoiingVerdict'
+import { BoilingVerdict } from './BoilingVerdict'
 import { TemperatureInput, ScaleNames } from './TemperatureInput'
 
 export function Calculator() {
